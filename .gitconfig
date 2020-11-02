@@ -1,0 +1,7 @@
+[alias]
+	graph = log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	overhere = "! f() { git branch -f $1 HEAD; }; f" 
+	timewarp = "! f() { git commit --fixup $1; GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $1~2; }; f"
+	away = stash push -u -k
+	anotherone = commit --amend --no-edit
+	wip = commit -m wip
